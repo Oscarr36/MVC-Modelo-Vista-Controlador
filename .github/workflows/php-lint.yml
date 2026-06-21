@@ -1,0 +1,21 @@
+name: PHP Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Check syntax errors
+        run: find . -name "*.php" -not -path "./vendor/*" | xargs -I {} php -l {}

@@ -1,0 +1,30 @@
+# Configuración con credenciales
+MVC/App/config/configurar.php
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Dependencias
+vendor/
+node_modules/
+
+# Caché y logs
+*.log
+*.cache
+/tmp/
+
+# IDE y editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Uploads (archivos subidos por usuarios)
+MVC/public/uploads/
